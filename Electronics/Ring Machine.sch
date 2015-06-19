@@ -1640,8 +1640,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="P+7" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="P+9" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="R6" library="ng" deviceset="RESISTOR" device="1206" value="0"/>
-<part name="GND18" library="FAB_Hello" deviceset="GND" device=""/>
-<part name="GND19" library="FAB_Hello" deviceset="GND" device=""/>
 <part name="R7" library="ng" deviceset="RESISTOR" device="1206" value="0"/>
 <part name="X1" library="con-molex" deviceset="22-23-2081" device=""/>
 <part name="X2" library="con-molex" deviceset="22-23-2081" device=""/>
@@ -1651,6 +1649,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="GND8" library="FAB_Hello" deviceset="GND" device=""/>
 <part name="P+8" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="GND6" library="FAB_Hello" deviceset="GND" device=""/>
+<part name="P+10" library="FAB_Hello" deviceset="VCC" device=""/>
+<part name="P+11" library="FAB_Hello" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1691,8 +1691,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="P+7" gate="VCC" x="91.44" y="-5.08" rot="R270"/>
 <instance part="P+9" gate="VCC" x="76.2" y="-5.08" rot="R90"/>
 <instance part="R6" gate="G$1" x="83.82" y="-15.24"/>
-<instance part="GND18" gate="1" x="91.44" y="-15.24" rot="R90"/>
-<instance part="GND19" gate="1" x="76.2" y="-15.24" rot="R270"/>
 <instance part="R7" gate="G$1" x="139.7" y="45.72"/>
 <instance part="X1" gate="-1" x="129.54" y="12.7"/>
 <instance part="X1" gate="-2" x="129.54" y="10.16"/>
@@ -1717,6 +1715,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="GND8" gate="1" x="0" y="91.44" rot="R90"/>
 <instance part="P+8" gate="VCC" x="-12.7" y="91.44" rot="R90"/>
 <instance part="GND6" gate="1" x="10.16" y="76.2" rot="R90"/>
+<instance part="P+10" gate="VCC" x="76.2" y="-15.24" rot="R90"/>
+<instance part="P+11" gate="VCC" x="91.44" y="-15.24" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1765,14 +1765,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <segment>
 <pinref part="JP5" gate="-2" pin="1"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="GND18" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="GND19" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="-1" pin="2"/>
@@ -1977,6 +1969,14 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <segment>
 <pinref part="C2" gate="1" pin="1"/>
 <pinref part="P+8" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="P+10" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="P+11" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 <net name="IN2B" class="0">

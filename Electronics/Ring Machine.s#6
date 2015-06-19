@@ -1964,16 +1964,15 @@ with Current Source and Sink Capability</description>
 <wire x1="-5.08" y1="27.94" x2="7.62" y2="27.94" width="0.1524" layer="91"/>
 <label x="-2.54" y="27.94" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VOUT"/>
+<wire x1="17.78" y1="63.5" x2="27.94" y2="63.5" width="0.1524" layer="91"/>
+<label x="20.32" y="63.5" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <wire x1="71.12" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="VOUT"/>
-<wire x1="17.78" y1="63.5" x2="27.94" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

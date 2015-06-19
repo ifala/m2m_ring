@@ -1588,7 +1588,6 @@ with Current Source and Sink Capability</description>
 <part name="P+5" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="P+4" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="IC1" library="burr-brown" deviceset="REG1118" device=""/>
-<part name="P+10" library="FAB_Hello" deviceset="VCC" device=""/>
 <part name="GND11" library="FAB_Hello" deviceset="GND" device=""/>
 <part name="JP3" library="jumper" deviceset="JP4QE" device=""/>
 <part name="JP5" library="jumper" deviceset="JP2QE" device=""/>
@@ -1632,7 +1631,6 @@ with Current Source and Sink Capability</description>
 <instance part="P+5" gate="VCC" x="71.12" y="99.06" rot="R90"/>
 <instance part="P+4" gate="VCC" x="167.64" y="63.5" rot="R270"/>
 <instance part="IC1" gate="G$1" x="5.08" y="63.5"/>
-<instance part="P+10" gate="VCC" x="20.32" y="63.5" rot="R270"/>
 <instance part="GND11" gate="1" x="5.08" y="48.26"/>
 <instance part="JP3" gate="-1" x="129.54" y="33.02" rot="R90"/>
 <instance part="JP3" gate="-2" x="119.38" y="35.56" rot="R270"/>
@@ -1892,16 +1890,17 @@ with Current Source and Sink Capability</description>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="VOUT"/>
-<pinref part="P+10" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="P+9" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VIN"/>
+<wire x1="-7.62" y1="63.5" x2="-17.78" y2="63.5" width="0.1524" layer="91"/>
+<label x="-17.78" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IN1A" class="0">
@@ -1956,11 +1955,6 @@ with Current Source and Sink Capability</description>
 </net>
 <net name="VBB" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="VIN"/>
-<wire x1="-7.62" y1="63.5" x2="-17.78" y2="63.5" width="0.1524" layer="91"/>
-<label x="-17.78" y="63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="JP5" gate="-1" pin="2"/>
 <wire x1="-5.08" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
 <label x="-2.54" y="30.48" size="1.778" layer="95"/>
@@ -1974,6 +1968,12 @@ with Current Source and Sink Capability</description>
 <net name="N$1" class="0">
 <segment>
 <wire x1="71.12" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="VOUT"/>
+<wire x1="17.78" y1="63.5" x2="27.94" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
